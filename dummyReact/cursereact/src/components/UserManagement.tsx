@@ -141,7 +141,7 @@ const UserManagement: React.FC = () => {
               <TableCell>Name ↓</TableCell>
               <TableCell>Role</TableCell>
               <TableCell>Contact number</TableCell>
-              <TableCell></TableCell>
+              <TableCell align="right">Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -163,7 +163,7 @@ const UserManagement: React.FC = () => {
                   </RoleBadge>
                 </TableCell>
                 <TableCell>{user.contactNumber}</TableCell>
-                <TableCell>
+                <TableCell align="right">
                   <ActionButton>
                     <EditIcon sx={{ fontSize: 16, color: '#64748b' }} />
                   </ActionButton>

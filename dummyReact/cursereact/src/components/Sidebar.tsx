@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
       </SidebarContainer>
       
       <UserAvatarContainer>
-        <StyledAvatar src="/api/placeholder/48/48" alt="User Avatar" />
+        <StyledAvatar>U</StyledAvatar>
       </UserAvatarContainer>
     </>
   );

@@ -33,18 +33,22 @@ export const LeftPanel = styled(Box)({
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: '#2d8287',
-  padding: '20px',
+  padding: '80px 40px 40px 80px',
   position: 'relative',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 // User Management Card
 export const UserManagementCard = styled(Paper)({
   backgroundColor: 'white',
-  borderRadius: '12px',
-  padding: '24px',
-  margin: '20px',
-  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-  flex: 1,
+  borderRadius: '16px',
+  padding: '32px',
+  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+  width: '100%',
+  maxWidth: '600px',
+  height: 'auto',
+  maxHeight: '500px',
   display: 'flex',
   flexDirection: 'column',
 });
@@ -69,6 +73,7 @@ export const SearchFilterSection = styled(Box)({
 export const TableContainer = styled(Box)({
   flex: 1,
   overflow: 'auto',
+  maxHeight: '300px',
 });
 
 // Custom Table
@@ -76,10 +81,12 @@ export const StyledTable = styled(Table)({
   '& .MuiTableHead-root': {
     '& .MuiTableCell-root': {
       fontWeight: 600,
-      fontSize: '14px',
+      fontSize: '12px',
       color: '#6b7280',
       borderBottom: '1px solid #e5e7eb',
-      padding: '12px 16px',
+      padding: '8px 12px',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
     },
   },
   '& .MuiTableBody-root': {
@@ -90,7 +97,8 @@ export const StyledTable = styled(Table)({
     },
     '& .MuiTableCell-root': {
       borderBottom: '1px solid #f3f4f6',
-      padding: '16px',
+      padding: '12px',
+      fontSize: '14px',
     },
   },
 });
@@ -98,17 +106,18 @@ export const StyledTable = styled(Table)({
 // Role Badge
 export const RoleBadge = styled(Box)<{ role: string }>(({ role }) => ({
   padding: '4px 12px',
-  borderRadius: '20px',
+  borderRadius: '12px',
   fontSize: '12px',
   fontWeight: 500,
   textAlign: 'center',
   backgroundColor: role === 'Admin' ? '#dbeafe' : '#f3e8ff',
   color: role === 'Admin' ? '#1d4ed8' : '#7c3aed',
+  display: 'inline-block',
 }));
 
 // Action Buttons
 export const ActionButton = styled(IconButton)({
-  padding: '4px',
+  padding: '6px',
   margin: '0 2px',
   '&:hover': {
     backgroundColor: '#f3f4f6',
@@ -123,13 +132,13 @@ export const Sidebar = styled(Box)({
   transform: 'translateY(-50%)',
   display: 'flex',
   flexDirection: 'column',
-  gap: '16px',
+  gap: '12px',
 });
 
 export const SidebarIcon = styled(Box)<{ active?: boolean }>(({ active }) => ({
-  width: '48px',
-  height: '48px',
-  borderRadius: '12px',
+  width: '44px',
+  height: '44px',
+  borderRadius: '10px',
   backgroundColor: active ? 'rgba(255, 255, 255, 0.2)' : 'rgba(255, 255, 255, 0.1)',
   display: 'flex',
   alignItems: 'center',
@@ -144,34 +153,34 @@ export const SidebarIcon = styled(Box)<{ active?: boolean }>(({ active }) => ({
 // User Avatar at Bottom Left
 export const UserAvatarContainer = styled(Box)({
   position: 'absolute',
-  bottom: '20px',
+  bottom: '30px',
   left: '20px',
 });
 
 export const StyledAvatar = styled(Avatar)({
-  width: '48px',
-  height: '48px',
+  width: '44px',
+  height: '44px',
   border: '2px solid rgba(255, 255, 255, 0.2)',
 });
 
 // Right Panel (Signup)
 export const RightPanel = styled(Box)({
-  width: '480px',
+  width: '500px',
   backgroundColor: '#f8fafc',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '40px',
+  padding: '60px 50px',
 });
 
 // Signup Card
 export const SignupCard = styled(Paper)({
   width: '100%',
   maxWidth: '400px',
-  padding: '40px',
-  borderRadius: '16px',
-  boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)',
+  padding: '32px',
+  borderRadius: '20px',
+  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.08)',
   backgroundColor: 'white',
 });
 
@@ -181,37 +190,42 @@ export const LogoSection = styled(Box)({
   alignItems: 'center',
   gap: '12px',
   marginBottom: '32px',
+  justifyContent: 'center',
 });
 
 export const LogoIcon = styled(Box)({
-  width: '32px',
-  height: '32px',
+  width: '36px',
+  height: '36px',
   backgroundColor: '#2d8287',
-  borderRadius: '6px',
+  borderRadius: '8px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   color: 'white',
-  fontSize: '18px',
+  fontSize: '20px',
   fontWeight: 'bold',
 });
 
 // Form Section
 export const FormSection = styled(Box)({
-  marginBottom: '32px',
+  marginBottom: '24px',
 });
 
 export const FormRow = styled(Box)({
   display: 'flex',
   gap: '16px',
-  marginBottom: '20px',
+  marginBottom: '16px',
+  '&:last-child': {
+    marginBottom: 0,
+  },
 });
 
 // Custom Input Fields
 export const StyledTextField = styled(TextField)({
   '& .MuiOutlinedInput-root': {
-    borderRadius: '8px',
+    borderRadius: '10px',
     backgroundColor: '#f8fafc',
+    fontSize: '14px',
     '& fieldset': {
       borderColor: '#e2e8f0',
     },
@@ -225,6 +239,7 @@ export const StyledTextField = styled(TextField)({
   },
   '& .MuiInputLabel-root': {
     color: '#64748b',
+    fontSize: '14px',
     '&.Mui-focused': {
       color: '#2d8287',
     },
@@ -232,8 +247,9 @@ export const StyledTextField = styled(TextField)({
 });
 
 export const StyledSelect = styled(Select)({
-  borderRadius: '8px',
+  borderRadius: '10px',
   backgroundColor: '#f8fafc',
+  fontSize: '14px',
   '& .MuiOutlinedInput-notchedOutline': {
     borderColor: '#e2e8f0',
   },
@@ -261,17 +277,18 @@ export const PasswordField = styled(StyledTextField)({
 // Submit Button
 export const SubmitButton = styled(Button)({
   width: '100%',
-  height: '48px',
-  borderRadius: '8px',
+  height: '50px',
+  borderRadius: '12px',
   backgroundColor: '#2d8287',
   color: 'white',
   fontSize: '16px',
   fontWeight: 600,
   textTransform: 'none',
   boxShadow: 'none',
+  marginTop: '8px',
   '&:hover': {
     backgroundColor: '#1f5f63',
-    boxShadow: '0 4px 12px rgba(45, 130, 135, 0.3)',
+    boxShadow: '0 8px 20px rgba(45, 130, 135, 0.3)',
   },
   '&:active': {
     transform: 'translateY(1px)',
@@ -280,7 +297,7 @@ export const SubmitButton = styled(Button)({
 
 // Typography Styles
 export const PageTitle = styled(Typography)({
-  fontSize: '24px',
+  fontSize: '20px',
   fontWeight: 600,
   color: '#1e293b',
 });
@@ -292,19 +309,20 @@ export const PageSubtitle = styled(Typography)({
 });
 
 export const SectionTitle = styled(Typography)({
-  fontSize: '20px',
+  fontSize: '18px',
   fontWeight: 600,
   color: '#1e293b',
-  marginBottom: '8px',
+  marginBottom: '6px',
 });
 
 export const SectionSubtitle = styled(Typography)({
   fontSize: '14px',
   color: '#64748b',
+  marginBottom: '20px',
 });
 
 export const BrandText = styled(Typography)({
-  fontSize: '20px',
+  fontSize: '22px',
   fontWeight: 600,
   color: '#1e293b',
 });
@@ -313,6 +331,7 @@ export const LoginLink = styled(Typography)({
   textAlign: 'center',
   fontSize: '14px',
   color: '#64748b',
+  marginTop: '24px',
   '& a': {
     color: '#2d8287',
     textDecoration: 'none',
@@ -325,12 +344,13 @@ export const LoginLink = styled(Typography)({
 
 // Add User Button
 export const AddUserButton = styled(Button)({
-  borderRadius: '8px',
+  borderRadius: '10px',
   backgroundColor: '#2d8287',
   color: 'white',
   textTransform: 'none',
   fontWeight: 500,
-  padding: '8px 16px',
+  padding: '8px 20px',
+  fontSize: '14px',
   '&:hover': {
     backgroundColor: '#1f5f63',
   },
@@ -338,38 +358,42 @@ export const AddUserButton = styled(Button)({
 
 // Search Field
 export const SearchField = styled(StyledTextField)({
-  width: '300px',
+  width: '250px',
   '& .MuiInputBase-input': {
-    padding: '12px 14px',
+    padding: '10px 14px',
+    fontSize: '14px',
   },
 });
 
 // Role Filter
 export const RoleFilter = styled(FormControl)({
-  minWidth: '120px',
+  minWidth: '100px',
   '& .MuiSelect-select': {
-    padding: '12px 14px',
+    padding: '10px 14px',
+    fontSize: '14px',
   },
 });
 
 // Bottom Description
 export const BottomDescription = styled(Box)({
   textAlign: 'center',
-  marginTop: '40px',
+  marginTop: '60px',
   padding: '0 20px',
+  maxWidth: '500px',
 });
 
 export const DescriptionTitle = styled(Typography)({
-  fontSize: '32px',
+  fontSize: '28px',
   fontWeight: 600,
   color: 'white',
-  marginBottom: '16px',
+  marginBottom: '12px',
 });
 
 export const DescriptionText = styled(Typography)({
   fontSize: '16px',
   color: 'rgba(255, 255, 255, 0.8)',
-  lineHeight: 1.6,
+  lineHeight: 1.5,
+  marginBottom: '20px',
 });
 
 // Dots Indicator
@@ -377,7 +401,7 @@ export const DotsIndicator = styled(Box)({
   display: 'flex',
   gap: '8px',
   justifyContent: 'center',
-  marginTop: '24px',
+  marginTop: '16px',
 });
 
 export const Dot = styled(Box)<{ active?: boolean }>(({ active }) => ({

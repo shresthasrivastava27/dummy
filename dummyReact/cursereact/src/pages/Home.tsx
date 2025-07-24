@@ -19,7 +19,6 @@ const Home: React.FC = () => {
       <LeftPanel>
         <Sidebar />
         <UserManagement />
-        
         <BottomDescription>
           <DescriptionTitle>
             User Management
